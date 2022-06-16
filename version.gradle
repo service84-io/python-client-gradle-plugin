@@ -15,5 +15,5 @@ ext {
   s84CoreName = 'pythonclient'
   s84Description = 'API Registry Python Client Gradle Plugin'
   s84GithubBase = 'https://github.com/service84-io/python-client-gradle-plugin'
-  s84Version = '0.5.0-SNAPSHOT'
+  s84Version = '0.5.0'
 }
