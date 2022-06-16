@@ -39,14 +39,14 @@ public class ProcessServiceDefinitionsAction implements Action<Task> {
   @Override
   public void execute(Task task) {
     String rootDir = project.getRootDir().getAbsolutePath();
-    Configuration javaClientConfiguration =
+    Configuration pythonClientConfiguration =
         project.getConfigurations().getAt(PluginImpl.PythonClient);
 
-    javaClientConfiguration.forEach(
+    pythonClientConfiguration.forEach(
         dependency -> {
           String dependencyName = dependency.getName();
           String serviceName = dependencyName.split("-")[0];
-          System.out.println("Generating Java client for " + serviceName);
+          System.out.println("Generating Python client for " + serviceName);
           String serviceDefinitionDirectory = rootDir + "/service_definitions/";
           String serviceDefinitionFile = serviceDefinitionDirectory + serviceName + ".yaml";
           String serviceClientDirectory = rootDir + "/" + serviceName + "_client";
